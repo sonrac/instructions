@@ -42,9 +42,9 @@ xdebug.var_display_max_depth = 3
 
 * Настроить свою IDE для работы с XDebug (например, мануал для PHPStorm доступен в офф документации https://www.jetbrains.com/help/phpstorm/2016.3/configuring-xdebug.html )
 
-* Установка под macOS
+## Установка под macOS
 
-## Установка под brew: brew install php70-xdebug
+### Установка под brew: brew install php70-xdebug
 
 Конфигурационные файлы лежат в директории /usr/local/etc/php или /usr/local/etc/php/<version>
 
