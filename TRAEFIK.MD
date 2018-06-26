@@ -152,3 +152,18 @@ services:
         - "traefik.portainer.port=9000" # Listen port in container (alias for backend)
 
 ```
+
+## Init swarm, start traefik and deploy container
+
+```
+# Init swarm mode
+docker swarm init
+# Create traefik overlay network
+docker network create -d overlay --attachable traefik-net
+# Deploy traefik
+docker stack deploy -c traefik-stack-local.yml traefik
+# Deploy portainer container
+docker stack deploy -c portainer-local-stack.yml portainer
+```
+
+## See [example configs](./files)

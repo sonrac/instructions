@@ -1,0 +1,61 @@
+debug = true
+logLevel = "DEBUG"
+defaultEntryPoints = ["http", "https"]
+[entryPoints]
+    [entryPoints.http]
+    address = ":80"
+    [entryPoints.https]
+    address=":443"
+#    [entryPoints.http.redirect]
+#      entryPoint = "https"
+    [entryPoints.https.tls]
+#        [entryPoint.https.tls.certificates]
+#            certFile="/etc/traefik/keys/sonrac.info/cert1.pem"
+#            keyFile="/etc/traefik/keys/sonrac.info/cert1.pem"
+
+    [entryPoints.traefik]
+        address=":8082"
+        [entryPoints.traefik.auth]
+            [entryPoints.traefik.auth.basic]
+                users = [
+                    "traefik:$2b$10$P2plq9gAWGK1i0B/YMREzuGzs62oyXcUCTAnqvfxWDRTFXnd8/42K"
+                ]
+    [entryPoints.ping]
+        address=":8084"
+        [entryPoints.ping.auth]
+            [entryPoints.ping.auth.basic]
+                users = [
+                    "traefik:$2b$10$P2plq9gAWGK1i0B/YMREzuGzs62oyXcUCTAnqvfxWDRTFXnd8/42K"
+                ]
+filePath = "log/traefik.txt"
+
+[api]
+entrypoint="traefik"
+dashboard = true
+debug=true
+# Enable more detailed statistics.
+[api.statistics]
+recentErrors = 100
+
+[ping]
+entrypoint="traefik"
+
+[docker]
+domain = "devinf"
+exposedbydefault = false
+watch=true
+swarmmode = true
+
+#[acme]
+#email = "doniysa@gmail.com"
+#onHostRule = true
+#caServer = "https://acme-staging-v02.api.letsencrypt.org/directory"
+#storage = "/etc/traefik/acme/account" # the key where to store your certificates in the KV store
+#storageKey = "/etc/traefik/acme/acme.json"
+#entryPoint = "https"
+#acmeLogging=true
+#    [acme.httpChallenge]
+#    entryPoint = "http"
+#    [acme.dnsChallenge]
+#        provider="godaddy"
+#        delayBeforeCheck=0
