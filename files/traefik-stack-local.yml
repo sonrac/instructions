@@ -23,7 +23,7 @@ services:
         - "traefik.backend=traefik"
         - "traefik.docker.network=traefik-net"
         - "traefik.traefik.frontend.rule=Host:dashboard.devinf"
-        - "traefik.frontend.entrypoints=https,http"
+#        - "traefik.frontend.entrypoints=https,http"
         - "traefik.port=8082"
         - "traefik.traefik.port=8082"
     volumes:

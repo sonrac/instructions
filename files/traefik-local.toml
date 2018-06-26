@@ -18,14 +18,14 @@ defaultEntryPoints = ["http", "https"]
         [entryPoints.traefik.auth]
             [entryPoints.traefik.auth.basic]
                 users = [
-                    "traefik:$2b$10$P2plq9gAWGK1i0B/YMREzuGzs62oyXcUCTAnqvfxWDRTFXnd8/42K"
+                    "traefik:$2b$10$P2plq9gAWGK1i0B/YMREzuGzs62oyXcUCTAnqvfxWDRTFXnd8/42K" # change credentials
                 ]
     [entryPoints.ping]
         address=":8084"
         [entryPoints.ping.auth]
             [entryPoints.ping.auth.basic]
                 users = [
-                    "traefik:$2b$10$P2plq9gAWGK1i0B/YMREzuGzs62oyXcUCTAnqvfxWDRTFXnd8/42K"
+                    "traefik:$2b$10$P2plq9gAWGK1i0B/YMREzuGzs62oyXcUCTAnqvfxWDRTFXnd8/42K" # change credentials
                 ]
 filePath = "log/traefik.txt"
 

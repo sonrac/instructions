@@ -36,10 +36,10 @@ services:
         - "traefik.enable=true"
         - "traefik.portainer.enable=true"
         - "traefik.backend=traefik"
-        - "traefik.portainer.frontend.rule=Host:docker-admin.stage.ministra"
+        - "traefik.portainer.frontend.rule=Host:docker-admin.devinf"
         - "traefik.docker.network=traefik-net"
         - "traefik.frontend.entrypoints=https,http"
-        - "traefik.http.redirect=https"
+#        - "traefik.http.redirect=https"
         - "traefik.port=9000"
         - "traefik.portainer.port=9000"
 

@@ -166,4 +166,6 @@ docker stack deploy -c traefik-stack-local.yml traefik
 docker stack deploy -c portainer-local-stack.yml portainer
 ```
 
+After it you can open (traefik)[http://traefik.devinf] and (portainer)[http://docker-admin.devinf]
+
 ## See [example configs](./files)
