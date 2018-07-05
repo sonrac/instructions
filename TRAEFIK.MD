@@ -10,9 +10,14 @@ address=/<domain-name>/127.0.0.1/
 ```
 
 * Setting up dhcpclient for auto resolve host
+* Add to `/etc/dhcp/dhclient.conf` next row:
 
 ```
 prepend domain-name-servers 127.0.0.1;
+```
+* Add to `/etc/dhcpcd.cong` next row:
+```
+option domain_name_servers 127.0.0.1, 8.8.8.8, 8.8.4.4
 ```
 
 * Setting up dnsmasq with Network Manager
