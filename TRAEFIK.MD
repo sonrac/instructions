@@ -15,7 +15,7 @@ address=/<domain-name>/127.0.0.1/
 ```
 prepend domain-name-servers 127.0.0.1;
 ```
-* Add to `/etc/dhcpcd.cong` next row:
+* Add to `/etc/dhcpcd.conf` next row:
 ```
 option domain_name_servers 127.0.0.1, 8.8.8.8, 8.8.4.4
 ```
