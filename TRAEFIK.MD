@@ -3,7 +3,7 @@
 ## Setup dnsmasq
 
 * Install dnsmasq
-* Add next row int /etc/dnsmasq.conf
+* Add next row int `/etc/dnsmasq.conf`
 
 ```
 address=/<domain-name>/127.0.0.1/
@@ -32,7 +32,7 @@ dns=dnsmasq
 
 ## Setting up traefik
 
-Example traefik.toml config:
+Example `traefik.toml` config:
 
 ```
 debug = true
@@ -100,7 +100,7 @@ swarmmode = true
 
 ## Setting up container deploy to swarm with traefik proxy
 
-Example docker-compose.yml for portainer
+Example `docker-compose.yml` for [portainer](https://hub.docker.com/r/portainer/portainer)
 
 ```
 version: '3.6'
@@ -171,6 +171,6 @@ docker stack deploy -c traefik-stack-local.yml traefik
 docker stack deploy -c portainer-local-stack.yml portainer
 ```
 
-After it you can open (traefik)[http://traefik.devinf] and (portainer)[http://docker-admin.devinf]
+After it you can open [traefik](http://traefik.devinf) and [portainer](http://docker-admin.devinf)
 
 ## See [example configs](./files)
