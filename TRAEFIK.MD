@@ -20,6 +20,8 @@ prepend domain-name-servers 127.0.0.1;
 option domain_name_servers 127.0.0.1, 8.8.8.8, 8.8.4.4
 ```
 
+* Comment `option domain_name_servers, domain_name, domain_search, host_name` in `/etc/dhcpcd.conf`
+
 * Setting up dnsmasq with Network Manager
 
 Add to section `[main]`:
