@@ -26,6 +26,7 @@ Add to section `[main]`:
 
 ```
 dns=dnsmasq
+dhcp=dhcpcd
 ```
 
 * Restart network manager
