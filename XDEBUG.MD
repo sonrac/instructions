@@ -29,11 +29,16 @@ sudo pecl install xdebug
  
 ```
 [xdebug]
-zend_extension=xdebug.so ; Модуль xdebug (или полный путь к нему)
-xdebug.idekey = PHPSTORM ; Ключ сессии IDE, которая слушает xdebug
-xdebug.remote_autostart = On ;Автоматическое включение xdebug (на prod режиме создает существенный оверхед)
-xdebug.remote_enable = On ;Разрешение удаленного подключения
-; xdebug.remote_host = test.host ; По необходимости можно ограничить подключения с определенного хоста
+; Модуль xdebug (или полный путь к нему)
+zend_extension=xdebug.so
+; Ключ сессии IDE, которая слушает xdebug
+xdebug.idekey = PHPSTORM
+;Автоматическое включение xdebug (на prod режиме создает существенный оверхед)
+xdebug.remote_autostart = On
+;Разрешение удаленного подключения    
+xdebug.remote_enable = On
+; По необходимости можно ограничить подключения с определенного хоста
+; xdebug.remote_host = test.host 
 xdebug.trace_output_dir = /tmp/xdebug ;Директория к трейс-логам xdebug
 xdebug.var_display_max_children = 128
 xdebug.var_display_max_data = 512
